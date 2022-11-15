@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:howsfeeling/Binding/Bindings.dart';
 import 'package:howsfeeling/Views/Screens/splashScreen.dart';
 
 void main() {
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
+      initialBinding: InitialBindings(),
       home: const SplasScreen(),
     );
   }

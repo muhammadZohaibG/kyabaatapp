@@ -2,27 +2,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeComponents {
-  Widget kBottomButtomVoices({String? img, String? name, Color? color}) {
-    return Container(
-      decoration: BoxDecoration(color: color),
+  Widget kBottomButtomVoices({String? img, String? name, Color? color, final onTapFunction}) {
+    return InkWell(
+      onTap: onTapFunction ,
+      child: Container(
+        decoration: BoxDecoration(color: color),
 
-      // margin: EdgeInsets.all(5),
-      padding: EdgeInsets.all(5),
-      height: 80,
-      width: 170,
-      child: Column(
-        children: [
-          Image.asset(
-            img!,
-            height: 35,
-            width: 35,
-            color: Colors.white,
-          ),
-          Text(
-            name!,
-            style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20,color: Colors.white),
-          )
-        ],
+        // margin: EdgeInsets.all(5),
+        padding: EdgeInsets.all(5),
+        height: 80,
+        width: 170,
+        child: Column(
+          children: [
+            Image.asset(
+              img!,
+              height: 35,
+              width: 35,
+              color: Colors.white,
+            ),
+            Text(
+              name!,
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20,color: Colors.white),
+            )
+          ],
+        ),
       ),
     );
   }
