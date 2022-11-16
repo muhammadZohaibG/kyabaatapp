@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:howsfeeling/Components/Components.dart';
-import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/MujhyChahye/Mujhy_ChahyeModel.dart';
+import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Need/NeedModel.dart';
 
 import '../../../../../utils/AppColors.dart';
 
-class Mujhy_ChahyeScreen extends StatelessWidget {
+class NeedScreen extends StatelessWidget {
   String? name;
   String? img;
   int? id;
 
-  Mujhy_ChahyeScreen({this.name, this.img, this.id});
+  NeedScreen({this.name, this.img, this.id});
 
   @override
   Widget build(BuildContext context) {
@@ -56,12 +56,12 @@ class Mujhy_ChahyeScreen extends StatelessWidget {
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
             physics: const NeverScrollableScrollPhysics(),
-            itemCount: mujhyChahyelist.length,
+            itemCount: needModelList.length,
             itemBuilder: (cxt, i) {
-              return kGridView(name: mujhyChahyelist[i].name,
-                  img: mujhyChahyelist[i].image,
+              return kGridView(name: needModelList[i].name,
+                  img: needModelList[i].image,
                   onTap: () {
-                    mujhyChahyelist[i].voice.toString();
+                    needModelList[i].voice.toString();
                   });
             })
     );

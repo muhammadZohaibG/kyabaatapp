@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:howsfeeling/Views/Screens/Gender/GenderScreen.dart';
 import 'package:howsfeeling/Views/Screens/Home/Screens/HomeScreen.dart';
 
 class SplasScreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _SplasScreenState extends State<SplasScreen> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 3),(){
-      Get.to(()=>HomeScreen());
+      Get.to(()=>GenderScreen());
     });
   }
   @override
