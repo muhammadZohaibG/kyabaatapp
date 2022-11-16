@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:howsfeeling/Audios/Audios.dart';
@@ -72,20 +74,14 @@ class HomeScreen extends StatelessWidget {
                     img: homeModelList[i].img,
                     onTap: () {
                       // print("object : ${genderController.isSelected.value}");
-                      if(i==0){
+                    //  if(i==0){
+print(i);
                         Get.to(() => MyConditionScreen(
                           name: homeModelList[i].name,
-                          img: homeModelList[i].img,
-                          id: i,
+
+                          index: i,
                         ));
-                      }
-                      if(i==1){}
-                      if(i==2){}
-                      if(i==3){}
-                      if(i==4){}
-                      if(i==5){}
-                      if(i==6){}
-                      if(i==7){}
+                      //}
 
 
 

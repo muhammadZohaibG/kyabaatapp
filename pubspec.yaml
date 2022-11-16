@@ -39,6 +39,7 @@ dependencies:
   get: any
   audioplayers: ^1.1.1
   shake: any
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:
