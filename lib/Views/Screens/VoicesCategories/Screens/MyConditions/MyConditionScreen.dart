@@ -8,6 +8,7 @@ import 'package:howsfeeling/Views/Screens/Gender/GenderController.dart';
 
 import '../../../../../Audios/Audios.dart';
 import '../../../../../utils/AppColors.dart';
+import '../../../appBar/AppBar.dart';
 import 'MyConditionController.dart';
 
 class MyConditionScreen extends StatefulWidget {
@@ -42,66 +43,39 @@ class _MyConditionScreenState extends State<MyConditionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: [
-                    0.0,
-                    1.0
-                  ],
-                  colors: <Color>[
-                    AppColors.gredientColor2,
-                    AppColors.gredientColor1
-                  ]),
-            ),
-          ),
-          automaticallyImplyLeading: true,
-          title: Text(
-            widget.name.toString(),
-            style: const TextStyle(
-                color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
-          ),
-          actions: [
-            IconButton(
-                icon: const Icon(Icons.notifications_active),
-                onPressed: () {
-                  Audios().playAudio('audios/ring2-mp3-6551.mp3');
-                }),
-          ],
-        ),
-        // appBar: AppBar(
-        //   backgroundColor: AppColors.appBarColor,
-        //   leading: const Icon(Icons.notifications_active),
+        appBar: PreferredSize(child: AppBarr(name: widget.name), preferredSize: Size.fromHeight(55)),
+        // AppBar(
+        //   elevation: 0,
+        //   flexibleSpace: Container(
+        //     decoration: const BoxDecoration(
+        //       gradient: LinearGradient(
+        //           begin: Alignment.topCenter,
+        //           end: Alignment.bottomCenter,
+        //           stops: [
+        //             0.0,
+        //             1.0
+        //           ],
+        //           colors: <Color>[
+        //             AppColors.gredientColor2,
+        //             AppColors.gredientColor1
+        //           ]),
+        //     ),
+        //   ),
+        //   automaticallyImplyLeading: true,
+        //   title: Text(
+        //     widget.name.toString(),
+        //     style: const TextStyle(
+        //         color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
+        //   ),
         //   actions: [
-        //     Padding(
-        //       padding: const EdgeInsets.all(10.0),
-        //       child: Row(
-        //         children: [
-        //           Image.asset(
-        //             widget.img.toString(),
-        //             height: 50,
-        //             width: 50,
-        //             color: Colors.white,
-        //           ),
-        //           const SizedBox(
-        //             width: 10,
-        //           ),
-        //           Text(
-        //             widget.name.toString(),
-        //             style: const TextStyle(
-        //                 fontSize: 25,
-        //                 fontWeight: FontWeight.w500,
-        //                 color: Colors.white),
-        //           ),
-        //         ],
-        //       ),
-        //     )
+        //     IconButton(
+        //         icon: const Icon(Icons.notifications_active),
+        //         onPressed: () {
+        //           Audios().playAudio('audios/ring2-mp3-6551.mp3');
+        //         }),
         //   ],
         // ),
+
         body: GetBuilder<MyConditionController>(
             init: MyConditionController(),
             builder: (controller) => Container(

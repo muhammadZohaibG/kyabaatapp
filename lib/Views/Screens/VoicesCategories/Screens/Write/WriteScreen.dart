@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
+import '../../../appBar/AppBar.dart';
 import 'WriteComponents.dart';
 
-class LekhkrBatanaScreen extends StatelessWidget {
-  const LekhkrBatanaScreen({Key? key}) : super(key: key);
+class WriteScreen extends StatelessWidget {
+String? name;
 
-  @override
+WriteScreen({this.name});
+
+@override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:PreferredSize(child: AppBarr(name: name!), preferredSize: Size.fromHeight(55)) ,
       body: SafeArea(
         child: Column(
           children: [
