@@ -1,16 +1,23 @@
 import 'package:flutter/cupertino.dart';
-import 'package:howsfeeling/utils/AppColors.dart';
+import 'package:flutter/material.dart';
 
 class WriteComponents{
-  Widget kHeading({String? img, String? name,Color? color ,BuildContext? context}){
+  Widget kHeading({String? 
+  img, String? name, BuildContext? context}){
     return  Container(
+      padding: EdgeInsets.all(10),
       margin: const EdgeInsets.symmetric(horizontal: 1),
-      decoration: const BoxDecoration(color:AppColors.lekhkrBatanaColor ),
+      decoration:   BoxDecoration(color: Colors.white ,
+      borderRadius:  BorderRadius.circular(10)
+      ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image.asset(img!,height: MediaQuery.of(context!).size.height*0.085),
-           Text(name!, style: const TextStyle(fontSize: 23, fontWeight: FontWeight.w700,),)
+           Text(name!, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700,),
+
+           ),
+          Image.asset(img!,height: MediaQuery.of(context!).size.height*0.03),
+
         ],
       ),
     );

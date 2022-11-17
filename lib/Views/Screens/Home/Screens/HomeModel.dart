@@ -17,6 +17,5 @@ List<HomeModel> homeModelList=[
   HomeModel(name: 'Pain',img: 'assets/pain.png',color: AppColors.sharpgreennTextColor),
   HomeModel(name: 'Discuss',img: 'assets/discuss.png',color: AppColors.sharpgreennTextColor),
   HomeModel(name: 'Write',img: 'assets/write.png',color: AppColors.sharpgreennTextColor),
-  HomeModel(name: 'Write',img: 'assets/myCondition.png',color: AppColors.sharpgreennTextColor),
 
 ];
