@@ -1,54 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:howsfeeling/Views/Screens/Gender/GenderController.dart';
+import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Pain/painCategoriesController.dart';
 import 'package:howsfeeling/Views/Screens/appBar/AppBar.dart';
 
 import '../../../../../Audios/Audios.dart';
 import '../../../../../utils/appColors.dart';
 import 'PainCategoriesComponents.dart';
 
-class PainCategoriesScreen extends StatelessWidget {
+class PainCategoriesScreen extends StatefulWidget {
   String? name;
 
   PainCategoriesScreen({this.name});
 
   @override
+  State<PainCategoriesScreen> createState() => _PainCategoriesScreenState();
+}
+
+
+final controller= Get.put(PainCategoriesController());
+final genderController= Get.find<GenderController>();
+class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    controller.player.stop();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    print('______$name');
+    print('______${widget.name}');
     return Scaffold(
       backgroundColor: AppColors.bgColor,
-      appBar: PreferredSize(child: AppBarr(name: name.toString()), preferredSize: Size.fromHeight(55)),
+      appBar: PreferredSize(child: AppBarr(name: widget.name.toString()), preferredSize: Size.fromHeight(55)),
 
-      // appBar: AppBar(
-      //   elevation: 0,
-      //   flexibleSpace: Container(
-      //     decoration: const BoxDecoration(
-      //       gradient: LinearGradient(
-      //           begin: Alignment.topCenter,
-      //           end: Alignment.bottomCenter,
-      //           stops: [
-      //             0.0,
-      //             1.0
-      //           ],
-      //           colors: <Color>[
-      //             AppColors.gredientColor2,
-      //             AppColors.gredientColor1
-      //           ]),
-      //     ),
-      //   ),
-      //   automaticallyImplyLeading: true,
-      //   title: Text(
-      //     name.toString(),
-      //     style: const TextStyle(
-      //         color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
-      //   ),
-      //   actions: [
-      //     IconButton(
-      //         icon: const Icon(Icons.notifications_active),
-      //         onPressed: () {
-      //           Audios().playAudio('audios/ring2-mp3-6551.mp3');
-      //         }),
-      //   ],
-      // ),
+
       body: SingleChildScrollView(
 
         child: Column(children: [
@@ -56,9 +44,30 @@ class PainCategoriesScreen extends StatelessWidget {
             margin: EdgeInsets.only(top: 10),
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                PainCategoriesComponents().kCustomButtom(name: 'Numb',onTap: (){}),
-                PainCategoriesComponents().kCustomButtom(name: 'Itching',onTap: (){}),
-                PainCategoriesComponents().kCustomButtom(name: 'Pain',onTap: (){}),
+                PainCategoriesComponents().kCustomButtom(name: 'Numb',onTap: (){
+                  if(genderController.isSelected==false){
+                    controller.playAudio('url');
+                  }else{
+                    controller.playAudio('url');
+
+                  }
+                }),
+                PainCategoriesComponents().kCustomButtom(name: 'Itching',onTap: (){
+                  if(genderController.isSelected==false){
+                    controller.playAudio('url');
+                  }else{
+                    controller.playAudio('url');
+
+                  }
+                }),
+                PainCategoriesComponents().kCustomButtom(name: 'Pain',onTap: (){
+                  if(genderController.isSelected==false){
+                    controller.playAudio('url');
+                  }else{
+                    controller.playAudio('url');
+
+                  }
+                }),
               ],
             ),
           ),
@@ -80,8 +89,22 @@ class PainCategoriesScreen extends StatelessWidget {
                 padding:  EdgeInsets.symmetric( horizontal: MediaQuery.of(context).orientation ==Orientation.portrait?0:MediaQuery.of(context).size.width*0.37),
                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    TextButton(child: Text('Front',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){}),
-                    TextButton(child: Text('Back',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){}),
+                    TextButton(child: Text('Front',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
+                      if(genderController.isSelected==false){
+                        controller.playAudio('url');
+                      }else{
+                        controller.playAudio('url');
+
+                      }
+                    }),
+                    TextButton(child: Text('Back',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
+                      if(genderController.isSelected==false){
+                        controller.playAudio('url');
+                      }else{
+                        controller.playAudio('url');
+
+                      }
+                    }),
                   ],
                 ),
               )
@@ -91,9 +114,30 @@ class PainCategoriesScreen extends StatelessWidget {
           Container(child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              PainCategoriesComponents().kCustomButtom1(name: 'Extreme',color: Colors.red,onTap: (){}),
-              PainCategoriesComponents().kCustomButtom1(name: 'Medium',color: Colors.orange,onTap: (){}),
-              PainCategoriesComponents().kCustomButtom1(name: 'Light',color: Colors.green,onTap: (){}),
+              PainCategoriesComponents().kCustomButtom1(name: 'Extreme',color: Colors.red,onTap: (){
+                if(genderController.isSelected==false){
+                  controller.playAudio('url');
+                }else{
+                  controller.playAudio('url');
+
+                }
+              }),
+              PainCategoriesComponents().kCustomButtom1(name: 'Medium',color: Colors.orange,onTap: (){
+                if(genderController.isSelected==false){
+                  controller.playAudio('url');
+                }else{
+                  controller.playAudio('url');
+
+                }
+              }),
+              PainCategoriesComponents().kCustomButtom1(name: 'Light',color: Colors.green,onTap: (){
+                if(genderController.isSelected==false){
+                  controller.playAudio('url');
+                }else{
+                  controller.playAudio('url');
+
+                }
+              }),
             ],
           )),
         ]),

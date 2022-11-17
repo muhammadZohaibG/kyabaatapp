@@ -7,5 +7,10 @@ class Audios{
   playAudio(String audioPath){
     player.play(AssetSource(audioPath));
   }
+
+  stopAudio(){
+    player.dispose();
+
+  }
   
 }

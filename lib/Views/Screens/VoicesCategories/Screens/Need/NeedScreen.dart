@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:howsfeeling/Components/Components.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Need/NeedModel.dart';
+import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Need/NeedController.dart';
 
 import '../../../../../utils/AppColors.dart';
+import '../../../Gender/GenderController.dart';
 
 class NeedScreen extends StatelessWidget {
   String? name;
@@ -10,6 +13,9 @@ class NeedScreen extends StatelessWidget {
   int? id;
 
   NeedScreen({this.name, this.img, this.id});
+
+  final genderController= Get.find<GenderController>();
+  final controller= Get.put(NeedController());
 
   @override
   Widget build(BuildContext context) {
@@ -56,12 +62,18 @@ class NeedScreen extends StatelessWidget {
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
             physics: const NeverScrollableScrollPhysics(),
-            itemCount: needModelList.length,
+            itemCount: controller.needModelList.length,
             itemBuilder: (cxt, i) {
-              return kGridView(name: needModelList[i].name,
-                  img: needModelList[i].image,
+              return kGridView(name: controller.needModelList[i].name,
+                  img: controller.needModelList[i].image,
                   onTap: () {
-                    needModelList[i].voice.toString();
+                    if(genderController.isSelected==false){
+                      controller.playAudio(controller.needModelList[i].menVOice.toString());
+                    }else{
+                      controller.playAudio(controller.needModelList[i].womenVOice.toString());
+
+
+                    }
                   });
             })
     );
