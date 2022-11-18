@@ -20,6 +20,7 @@ class NeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         appBar: AppBar(
           backgroundColor: AppColors.appBarColor,
           leading: const Icon(Icons.notifications_active),
