@@ -8,7 +8,9 @@ class MyCustomPainter  extends CustomPainter{
 
 
 
-  MyCustomPainter({this.points, });
+
+
+  MyCustomPainter({this.points,   });
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -16,31 +18,37 @@ class MyCustomPainter  extends CustomPainter{
     Paint background= Paint()..color=Colors.green;
     Rect rect=Rect.fromLTWH(0, 0, size.width, size.height);
     canvas.drawRect(rect, background);
-   // eraser= BlendMode.clear;
     Paint paint=Paint();
-    paint.color=Colors.black;
+
+      // paint.color=Colors.black;
+
+
     paint.strokeWidth=2.0;
     paint.isAntiAlias=true;
     paint.strokeCap=StrokeCap.round;
+    // isSelected=false;
+     //canvas.saveLayer(Rect.fromLTWH(0, 0, size.width, size.height), Paint());
+canvas.save();
+      for(int i=0;i<points!.length-1;i++ ){
 
+        if(points![i]!=null && points![i+1]!=null  ){
 
+          canvas.drawLine(points![i+1], points![i], paint);
+          // canvas.saveLayer(Rect.fromLTWH(0, 0, size.width, size.height), Paint());
 
-    for(int i=0;i<=points!.length-1;i++){
-      // canvas.saveLayer(Rect.fromLTWH(0, 0, size.width, size.height), Paint());
+         // print("LINEEEEEEEE");
 
-      if(points![i]!=null && points![i+1]!=null ){
-        canvas.drawLine(points![i+1], points![i], paint);
+        }
+        else if(points![i]!=null && points![i+1]==null){
+          canvas.drawPoints(PointMode.points, [points![i]], paint);
 
-        print("LINEEEEEEEE");
+        }
+
 
       }
-      else if(points![i]!=null && points![i+1]==null){
-        canvas.drawPoints(PointMode.points, [points![i]], paint);
 
-      }
 
-    }
-    // canvas.restore();
+    canvas.restore();
 
   }
 

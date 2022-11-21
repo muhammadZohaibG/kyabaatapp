@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class WriteComponents{
-  Widget kHeading({String? 
+  Widget kCustomButton({String?
   img, String? name, final onTap ,BuildContext? context}){
     return  InkWell(
       onTap: onTap  ,

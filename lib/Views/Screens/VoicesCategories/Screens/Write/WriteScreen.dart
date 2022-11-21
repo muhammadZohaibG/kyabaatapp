@@ -34,32 +34,30 @@ class WriteScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         Expanded(
-                            child: WriteComponents().kHeading(
+                            child: WriteComponents().kCustomButton(
                                 img: 'assets/pencil.png',
                                 name: 'Write',
                                 onTap: () {
-                                  controller.isSelected=false;
-
-                                  print(
-                                      "****** ${controller.points!.value.toSet()}");
+                                  controller.updateIsSelected(false);
                                 },
                                 context: context)),
                         Expanded(
-                            child: WriteComponents().kHeading(
+                            child: WriteComponents().kCustomButton(
                                 img: 'assets/erase.png',
                                 name: 'Erase',
                                 onTap: () {
-                                  controller.isSelected=true;
+                                  controller.updateIsSelected(true);
                                   print('Removerrrrrrrrrrrr');
                                   // controller.points!.value.removeWhere((element) => element.Offset());
                                 },
                                 context: context)),
                         Expanded(
-                            child: WriteComponents().kHeading(
+                            child: WriteComponents().kCustomButton(
                                 img: 'assets/new.png',
                                 name: 'New Page',
                                 onTap: () {
                                   controller.points!.value.clear();
+                                  controller.updateIsSelected(false);
                                 },
                                 context: context)),
                       ],
@@ -73,44 +71,51 @@ class WriteScreen extends StatelessWidget {
                       borderRadius: const BorderRadius.all(Radius.circular(20)),
                       child: GestureDetector(
                         onPanDown: (det) {
-                          if (controller.isSelected == false) {
-                            controller.points!.value.add(det.localPosition);
-                            controller.update();
-                          } else {
-                            BlendMode.clear;
-                          }
+                        Canvas?  canvas;
+
+                        //      controller.points!.value.add(det.localPosition);
+                        // controller.eraserPoints!.value.add(det.localPosition);
+                        //
+                        // controller.update();
+                        controller.changeBrush(det.localPosition);
+
+
+
+
                         },
                         onPanUpdate: (det) {
-                          if (controller.isSelected == false) {
+                          controller.changeBrush(det.localPosition);
 
-                            controller.points!.value.add(det.localPosition);
-                            controller.update();
-                            Canvas? cavas;
-                            cavas!.saveLayer(Rect.fromLTWH(0, 0, 400, 400), Paint());
 
-                          } else {
-                            Canvas? cavas;
-                            cavas!.restore();
-                          }
+                          // if (controller.isSelected == false) {
+                          //   controller.points!.value.add(det.localPosition);
+                          //   controller.update();
+                          //   // cavas!.saveLayer(Rect.fromLTWH(0, 0, 400, 400), Paint());
+                          //
+                          // } else {
+                          //   controller.eraserPoints!.value.add(det.localPosition);
+                          //   controller.update();
+                          //
+                          // }
                         },
                         onPanEnd: (det) {
-                          if (controller.isSelected == false) {
+
 
                             controller.points!.value.add(Offset.infinite);
-                            controller.update();
-                            Canvas? cavas;
-                            cavas!.saveLayer(Rect.fromLTWH(0, 0, 400, 400), Paint());
 
-                          } else {
-                            Canvas? cavas;
-                            cavas!.restore();
-                          }
+                          controller.update();
 
-                          print('***********');
+
+
+
+
+
                         },
                         child: CustomPaint(
                             painter: MyCustomPainter(
-                          points: controller.points!.value,
+                          points: controller.points!.value    ,
+
+
                         )),
                       ),
                     ),
