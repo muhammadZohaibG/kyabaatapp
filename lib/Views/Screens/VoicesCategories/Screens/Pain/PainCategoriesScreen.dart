@@ -46,25 +46,25 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
               children: [
                 PainCategoriesComponents().kCustomButtom(name: 'Numb',onTap: (){
                   if(genderController.isSelected==false){
-                    controller.playAudio('url');
+                    controller.playAudio('audios/menAudios/pain/numb.mp3');
                   }else{
-                    controller.playAudio('url');
+                    controller.playAudio('audios/womenAudios/pain/numb.mp3');
 
                   }
                 }),
                 PainCategoriesComponents().kCustomButtom(name: 'Itching',onTap: (){
                   if(genderController.isSelected==false){
-                    controller.playAudio('url');
+                    controller.playAudio('audios/menAudios/pain/itching.mp3');
                   }else{
-                    controller.playAudio('url');
+                    controller.playAudio('audios/womenAudios/pain/itching.mp3');
 
                   }
                 }),
                 PainCategoriesComponents().kCustomButtom(name: 'Pain',onTap: (){
                   if(genderController.isSelected==false){
-                    controller.playAudio('url');
+                    controller.playAudio('audios/menAudios/pain/pain.mp3');
                   }else{
-                    controller.playAudio('url');
+                    controller.playAudio('audios/womenAudios/pain/pain.mp3');
 
                   }
                 }),
@@ -91,17 +91,17 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                   children: [
                     TextButton(child: Text('Front',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
                       if(genderController.isSelected==false){
-                        controller.playAudio('url');
+                        controller.playAudio('audios/menAudios/pain/front.mp3');
                       }else{
-                        controller.playAudio('url');
+                        controller.playAudio('audios/womenAudios/pain/front.mp3');
 
                       }
                     }),
                     TextButton(child: Text('Back',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
                       if(genderController.isSelected==false){
-                        controller.playAudio('url');
+                        controller.playAudio('audios/menAudios/pain/back.mp3');
                       }else{
-                        controller.playAudio('url');
+                        controller.playAudio('audios/womenAudios/pain/back.mp3');
 
                       }
                     }),
@@ -116,25 +116,25 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
             children: [
               PainCategoriesComponents().kCustomButtom1(name: 'Extreme',color: Colors.red,onTap: (){
                 if(genderController.isSelected==false){
-                  controller.playAudio('url');
+                  controller.playAudio('audios/menAudios/pain/extreme.mp3');
                 }else{
-                  controller.playAudio('url');
+                  controller.playAudio('audios/womenAudios/pain/extreme.mp3');
 
                 }
               }),
               PainCategoriesComponents().kCustomButtom1(name: 'Medium',color: Colors.orange,onTap: (){
                 if(genderController.isSelected==false){
-                  controller.playAudio('url');
+                  controller.playAudio('audios/menAudios/pain/medium.mp3');
                 }else{
-                  controller.playAudio('url');
+                  controller.playAudio('audios/womenAudios/pain/medium.mp3');
 
                 }
               }),
               PainCategoriesComponents().kCustomButtom1(name: 'Light',color: Colors.green,onTap: (){
                 if(genderController.isSelected==false){
-                  controller.playAudio('url');
+                  controller.playAudio('audios/menAudios/pain/light.mp3');
                 }else{
-                  controller.playAudio('url');
+                  controller.playAudio('audios/womenAudios/pain/light.mp3');
 
                 }
               }),

@@ -68,8 +68,18 @@ flutter:
   assets:
     - assets/
     - assets/audios/
-    - assets/audios/menAudios/
-    - assets/audios/womenAudios/
+    - assets/audios/menAudios/myConditions/
+    - assets/audios/womenAudios/myConditions/
+    - assets/audios/menAudios/need/
+    - assets/audios/womenAudios/need/
+    - assets/audios/menAudios/callTo/
+    - assets/audios/womenAudios/callTo/
+    - assets/audios/menAudios/clean/
+    - assets/audios/womenAudios/clean/
+    - assets/audios/menAudios/pain/
+    - assets/audios/womenAudios/pain/
+    - assets/audios/menAudios/discuss/
+    - assets/audios/womenAudios/discuss/
 
   #   - images/a_dot_ham.jpeg
 
