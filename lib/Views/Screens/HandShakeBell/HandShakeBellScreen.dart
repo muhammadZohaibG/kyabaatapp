@@ -1,51 +1,73 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:howsfeeling/Audios/Audios.dart';
 import 'package:howsfeeling/Views/Screens/HandShakeBell/HandShakebellController.dart';
-import 'package:shake/shake.dart';
+import 'package:howsfeeling/Views/Screens/appBar/AppBar.dart';
+import 'package:sensors_plus/sensors_plus.dart';
 
-class HandShakeBellscreen extends StatefulWidget {
-   HandShakeBellscreen({Key? key}) : super(key: key);
+class HandShakeBell extends StatefulWidget {
+  const HandShakeBell({Key? key}) : super(key: key);
 
   @override
-  State<HandShakeBellscreen> createState() => _HandShakeBellscreenState();
+  State<HandShakeBell> createState() => _HandShakeBellState();
 }
 
-class _HandShakeBellscreenState extends State<HandShakeBellscreen> {
-final controller=Get.put(HandShakeBellController());
-ShakeDetector detector = ShakeDetector.autoStart(
-  onPhoneShake: () {
-    print("object");
-    // Do stuff on phone shake
-  },
-  minimumShakeCount: 1,
-  shakeSlopTimeMS: 500,
-  shakeCountResetTime: 3000,
-  shakeThresholdGravity: 2.7,
-);
-@override
-void initState() {
-  super.initState();
+class _HandShakeBellState extends State<HandShakeBell> {
 
-  detector.startListening();
-  // To close: detector.stopListening();
-  // ShakeDetector.waitForStart() waits for user to call detector.startListening();
-}
+    // final controller=Get.put(HandShakeBellController());
+
+  // double x = 0, y = 0, z = 0;
+  // Color? _backgroundColor;
+
+
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(55),
+        child: AppBarr(name: 'Hand shake Bell',onTap: (){}),
 
-    return   Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Center(child:
-            Text('فون ہلانے پر گھنٹی کا بجنا',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 25),)          ),
-            Center(child:
-            Text('${controller.detector!.mShakeCount}',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 25),)          ),
-          ],
-        ),
-        ),
+      ),
+      body: GetBuilder<HandShakeBellController>(
+        init: HandShakeBellController(),
+        builder: (controller) {
+          return Container(
+            decoration: BoxDecoration(
+              color: controller.backgroundColor
+            ),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
 
+               const Text(
+                  'Shake Phone to Ring Bell',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+                Container(
+                  margin:
+                      EdgeInsets.only(top: (MediaQuery.of(context).size.height / 8)),
+                  padding: EdgeInsets.all(10),
+                  child: Center(
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.amber[700],
+                      ),
+                      child: const Icon(Icons.doorbell_outlined,size: 70,)
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+      ),
     );
   }
 }

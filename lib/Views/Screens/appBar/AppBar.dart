@@ -5,7 +5,8 @@ import '../../../utils/AppColors.dart';
 
 class AppBarr extends StatelessWidget {
   String? name;
-    AppBarr({Key? key,  this.name}) : super(key: key);
+  final onTap;
+    AppBarr({Key? key,  this.name, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +37,9 @@ class AppBarr extends StatelessWidget {
         actions: [
           IconButton(
               icon: const Icon(Icons.notifications_active),
-              onPressed: () {
-                Audios().playAudio('audios/ring2-mp3-6551.mp3');
-              }),
+              onPressed: onTap,),
+
+
         ],
       );
 

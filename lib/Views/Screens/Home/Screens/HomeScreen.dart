@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppColors.bgColor,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(55),
-          child: AppBarr(name: 'Scenarios')),
+          child: AppBarr(name: 'Scenarios',onTap: (){Get.to(()=>HandShakeBell() );},)),
 
 
       body: SafeArea(

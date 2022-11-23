@@ -21,10 +21,13 @@ class DiscussCategoriesScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: PreferredSize(
+          preferredSize: Size.fromHeight(55),
           child: AppBarr(
-            name: name,
-          ),
-          preferredSize: Size.fromHeight(55)),
+            name: name,onTap: (){
+            Audios().playAudio('audios/ring2-mp3-6551.mp3');
+
+          },
+          )),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Column(

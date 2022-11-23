@@ -31,10 +31,13 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print('______${widget.name}');
+
     return Scaffold(
       backgroundColor: AppColors.bgColor,
-      appBar: PreferredSize(child: AppBarr(name: widget.name.toString()), preferredSize: Size.fromHeight(55)),
+      appBar: PreferredSize(preferredSize: Size.fromHeight(55), child: AppBarr(name: widget.name.toString(),onTap: (){
+        Audios().playAudio('audios/ring2-mp3-6551.mp3');
+
+      })),
 
 
       body: SingleChildScrollView(

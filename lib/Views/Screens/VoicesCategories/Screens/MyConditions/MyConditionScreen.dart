@@ -28,7 +28,6 @@ class _MyConditionScreenState extends State<MyConditionScreen> {
 
 
 
-//by sajawal
   @override
   void dispose() {
     // TODO: implement dispose
@@ -43,7 +42,11 @@ class _MyConditionScreenState extends State<MyConditionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: PreferredSize(
-            child: AppBarr(name: widget.name),
+            child: AppBarr(name: widget.name,onTap:
+                  () {
+                Audios().playAudio('audios/ring2-mp3-6551.mp3');
+
+            }),
             preferredSize: Size.fromHeight(55)),
         body: Container(
           margin: EdgeInsets.all(10),

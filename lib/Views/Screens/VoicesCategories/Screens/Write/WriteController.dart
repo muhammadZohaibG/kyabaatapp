@@ -29,7 +29,7 @@ bool isSelected =false;
 
 
    changeBrush(  final localPosition){
-     double? strokeWidth =10;
+     double? strokeWidth =3;
       if ( isSelected == false ){
 
         var paint = Paint();
@@ -44,9 +44,11 @@ bool isSelected =false;
 
       }else{
         var paint = Paint();
-        paint.blendMode = BlendMode.clear;
+        // paint.blendMode = BlendMode.clear;
         paint.color = Colors.white;
         paint.strokeWidth = strokeWidth;
+        eraserPoints!.add(localPosition);
+
         update();
       }
 

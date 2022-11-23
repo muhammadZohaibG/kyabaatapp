@@ -1,12 +1,11 @@
 import 'package:flutter/animation.dart';
-import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/Painter/Painter.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/WriteController.dart';
 import 'package:howsfeeling/utils/AppColors.dart';
-
+import '../../../../../Audios/Audios.dart';
 import '../../../appBar/AppBar.dart';
 import 'WriteComponents.dart';
 
@@ -22,7 +21,11 @@ class WriteScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: PreferredSize(
-          child: AppBarr(name: name!), preferredSize: Size.fromHeight(55)),
+          preferredSize: const Size.fromHeight(55),
+          child: AppBarr(name: name!,onTap: (){
+            Audios().playAudio('audios/ring2-mp3-6551.mp3');
+
+          })),
       body: GetBuilder<WriteController>(
           init: WriteController(),
           builder: (controller) {
@@ -30,7 +33,7 @@ class WriteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                     child: Row(
                       children: [
                         Expanded(
@@ -46,7 +49,8 @@ class WriteScreen extends StatelessWidget {
                                 img: 'assets/erase.png',
                                 name: 'Erase',
                                 onTap: () {
-                                  controller.updateIsSelected(true);
+
+                                    controller.updateIsSelected(true);
                                   print('Removerrrrrrrrrrrr');
                                   // controller.points!.value.removeWhere((element) => element.Offset());
                                 },
@@ -66,7 +70,7 @@ class WriteScreen extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height * 0.7,
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                     child: ClipRRect(
                       borderRadius: const BorderRadius.all(Radius.circular(20)),
                       child: GestureDetector(
@@ -113,7 +117,8 @@ class WriteScreen extends StatelessWidget {
                         },
                         child: CustomPaint(
                             painter: MyCustomPainter(
-                          points: controller.points!.value    ,
+
+                           points: controller.isSelected==true? controller.eraserPoints!.value :controller.points!.value ,
 
 
                         )),
