@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Kya Baat',
       theme: ThemeData(
+        fontFamily: 'ariel',
         // textTheme: GoogleFonts.ari,
 
         primarySwatch: Colors.green,
