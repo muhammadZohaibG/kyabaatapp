@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/Painter/Painter.dart';
+import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/Painter/PainterModel.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/WriteController.dart';
 import 'package:howsfeeling/utils/AppColors.dart';
 import '../../../../../Audios/Audios.dart';
@@ -22,10 +23,11 @@ class WriteScreen extends StatelessWidget {
       backgroundColor: AppColors.bgColor,
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(55),
-          child: AppBarr(name: name!,onTap: (){
-            Audios().playAudio('audios/ring2-mp3-6551.mp3');
-
-          })),
+          child: AppBarr(
+              name: name!,
+              onTap: () {
+                Audios().playAudio('audios/ring2-mp3-6551.mp3');
+              })),
       body: GetBuilder<WriteController>(
           init: WriteController(),
           builder: (controller) {
@@ -33,7 +35,8 @@ class WriteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 10),
                     child: Row(
                       children: [
                         Expanded(
@@ -41,7 +44,7 @@ class WriteScreen extends StatelessWidget {
                                 img: 'assets/pencil.png',
                                 name: 'Write',
                                 onTap: () {
-                                  controller.updateIsSelected(false);
+                                  controller.updateEraser(Colors.black);
                                 },
                                 context: context)),
                         Expanded(
@@ -49,10 +52,7 @@ class WriteScreen extends StatelessWidget {
                                 img: 'assets/erase.png',
                                 name: 'Erase',
                                 onTap: () {
-
-                                    controller.updateIsSelected(true);
-                                  print('Removerrrrrrrrrrrr');
-                                  // controller.points!.value.removeWhere((element) => element.Offset());
+                                  controller.updateEraser(Colors.white);
                                 },
                                 context: context)),
                         Expanded(
@@ -60,68 +60,48 @@ class WriteScreen extends StatelessWidget {
                                 img: 'assets/new.png',
                                 name: 'New Page',
                                 onTap: () {
-                                  controller.points!.value.clear();
-                                  controller.updateIsSelected(false);
+                                  controller.drawingPoint!.value.clear();
+                                  controller.updateEraser(Colors.black);
                                 },
                                 context: context)),
                       ],
                     ),
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    height: MediaQuery
+                        .of(context)
+                        .orientation == Orientation.portrait ? MediaQuery
+                        .of(context)
+                        .size
+                        .height * 0.75 :MediaQuery
+                        .of(context)
+                        .size
+                        .height * 0.55 ,
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 12),
                     child: ClipRRect(
                       borderRadius: const BorderRadius.all(Radius.circular(20)),
                       child: GestureDetector(
                         onPanDown: (det) {
-                        Canvas?  canvas;
-
-                        //      controller.points!.value.add(det.localPosition);
-                        // controller.eraserPoints!.value.add(det.localPosition);
-                        //
-                        // controller.update();
-                        controller.changeBrush(det.localPosition);
-
-
-
-
+                          controller.onPanoption(det.localPosition);
                         },
                         onPanUpdate: (det) {
-                          controller.changeBrush(det.localPosition);
-
-
-                          // if (controller.isSelected == false) {
-                          //   controller.points!.value.add(det.localPosition);
-                          //   controller.update();
-                          //   // cavas!.saveLayer(Rect.fromLTWH(0, 0, 400, 400), Paint());
-                          //
-                          // } else {
-                          //   controller.eraserPoints!.value.add(det.localPosition);
-                          //   controller.update();
-                          //
-                          // }
+                          controller.onPanoption(det.localPosition);
                         },
                         onPanEnd: (det) {
-
-
-                            controller.points!.value.add(Offset.infinite);
+                          controller.drawingPoint!.add(PainterModel(
+                              offset: Offset.infinite, paint: Paint()));
 
                           controller.update();
-
-
-
-
-
-
                         },
                         child: CustomPaint(
                             painter: MyCustomPainter(
-
-                           points: controller.isSelected==true? controller.eraserPoints!.value :controller.points!.value ,
-
-
-                        )),
+                              drawingPoints: controller.drawingPoint!.value,
+                            )),
                       ),
                     ),
                   ),

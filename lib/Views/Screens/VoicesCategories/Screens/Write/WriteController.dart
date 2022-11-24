@@ -3,13 +3,18 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/Painter/PainterModel.dart';
 
 class WriteController extends GetxController {
-  RxList<Offset>? points = <Offset>[].obs;
-  RxList<Offset>? eraserPoints = <Offset>[].obs;
+
+
+  RxList<PainterModel>? drawingPoint = <PainterModel>[].obs;
+
+  Color? selectedColor = Colors.black;
+  double? strokeWidth=3;
 
   dynamic remover;
-  double? strokeWidth=4;
+
 bool isSelected =false;
 
  updateIsSelected(bool val){
@@ -18,39 +23,27 @@ bool isSelected =false;
    update();
  }
 
+ updateEraser(Color color){
+   selectedColor= color;
+   update();
+ }
+
+ onPanoption(val){
+   drawingPoint!.add(PainterModel(
+     offset: val,
+     paint: Paint()
+
+       ..isAntiAlias = true
+       ..strokeCap = StrokeCap.round
+       ..color =   selectedColor!
+       ..strokeWidth =  strokeWidth!,
+
+   ));
+   update();
+ }
 
 
 
 
-  removePainter(val){
-    remover = val;
-    update();
-  }
 
-
-   changeBrush(  final localPosition){
-     double? strokeWidth =3;
-      if ( isSelected == false ){
-
-        var paint = Paint();
-        paint.isAntiAlias = true;
-        paint.color = Colors.black;
-        paint.strokeWidth = strokeWidth;
-        points!.add(localPosition);
-        update();
-
-
-
-
-      }else{
-        var paint = Paint();
-        // paint.blendMode = BlendMode.clear;
-        paint.color = Colors.white;
-        paint.strokeWidth = strokeWidth;
-        eraserPoints!.add(localPosition);
-
-        update();
-      }
-
-  }
 }

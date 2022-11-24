@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:howsfeeling/Audios/Audios.dart';
 import 'package:howsfeeling/Views/Screens/HandShakeBell/HandShakebellController.dart';
+import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Pain/PainCategoriesScreen.dart';
 import 'package:howsfeeling/Views/Screens/appBar/AppBar.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 
@@ -14,11 +15,22 @@ class HandShakeBell extends StatefulWidget {
 
 class _HandShakeBellState extends State<HandShakeBell> {
 
-    // final controller=Get.put(HandShakeBellController());
+    final controller=Get.put(HandShakeBellController());
 
   // double x = 0, y = 0, z = 0;
   // Color? _backgroundColor;
 
+    @override
+    void dispose() {
+      for(final subscription in controller.streamSubscriptions){
+        subscription.cancel();
+        controller.player.stop();
+
+      }
+
+      // TODO: implement dispose
+      super.dispose();
+    }
 
   @override
   Widget build(BuildContext context) {
