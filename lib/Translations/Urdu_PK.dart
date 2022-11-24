@@ -1,0 +1,23 @@
+const Map<String, String> urdu = {
+  'Male': 'آدمی',
+  'Woman': 'عورت',
+  'Who you are? ': 'تم کون ہو؟',
+  'Scenarios ': 'منظرنامے',
+  'My Condition ': 'میری حالت',
+  'Need ': 'ضرورت',
+  'Call to ': 'پر کال کریں',
+  'Clean': 'صاف',
+  'Pain': 'درد',
+  'Discuss': 'بحث کریں',
+  'Write': 'لکھیں',
+  'Normal': 'نارمل',
+  'Feeling Pain': 'درد محسوس کرنا',
+  'Feeling Cold': 'سردی لگ رہی ہے',
+  'Sweating': 'پسینہ آ رہا ہے',
+  'Fever': 'بخار',
+  'Feeling Fear': 'خوف محسوس کرنا',
+  'Feeling Better': 'بہتر محسوس کرنا',
+  'Feeling Bad': 'برا لگنا',
+  'Don’t Know': 'نہیں جانتے',
+
+};
