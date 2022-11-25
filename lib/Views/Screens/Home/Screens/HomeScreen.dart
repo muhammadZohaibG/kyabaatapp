@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
         automaticallyImplyLeading: true,
         title:   Text(
           'Scenarios'.tr,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
         ),
         actions: [
@@ -57,7 +57,8 @@ class HomeScreen extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.notifications_active),
                 onPressed: (){
-                  Audios().playAudio('audios/phoneBell.mp3');
+                  Get.to(()=>HandShakeBell());
+                  // Audios().playAudio('audios/phoneBell.mp3');
                 },),
               IconButton(
                 icon: const Icon(Icons.language),
