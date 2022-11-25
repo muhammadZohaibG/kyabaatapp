@@ -32,7 +32,7 @@ class GenderScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     _genderComponents.kGenderContainer(
-                        name: 'Male',
+                        name: 'Male'.tr,
                         img: 'assets/male.png',
                         context: context,
                         borderColor: controller.isSelected.value == false
@@ -43,7 +43,7 @@ class GenderScreen extends StatelessWidget {
                           Get.to(()=>HomeScreen());
                         }),
                     _genderComponents.kGenderContainer(
-                        name: 'Woman',
+                        name: 'Woman'.tr,
                         img: 'assets/female.png',
                         context: context,
                         borderColor: controller.isSelected.value == true

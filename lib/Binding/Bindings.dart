@@ -6,7 +6,6 @@ class InitialBindings extends Bindings{
   @override
   void dependencies() {
     // TODO: implement dependencies
-    Get.lazyPut(() => HomeController());
     Get.lazyPut(() => GenderController());
   }
 

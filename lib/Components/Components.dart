@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:howsfeeling/utils/AppColors.dart';
 
-Widget kGridView({String? img, String? name, final listcount,  final onTap}){
+Widget kGridViewContainer({String? img, String? name, final listcount,  final onTap}){
   return InkWell(
     onTap: onTap,
     child: Container(
@@ -17,4 +17,4 @@ Widget kGridView({String? img, String? name, final listcount,  final onTap}){
       ),
     ),
   );
-}
+} 

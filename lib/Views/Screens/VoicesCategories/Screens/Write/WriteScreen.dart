@@ -7,7 +7,7 @@ import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/Painter
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/WriteController.dart';
 import 'package:howsfeeling/utils/AppColors.dart';
 import '../../../../../Audios/Audios.dart';
-import '../../../appBar/AppBar.dart';
+import '../../../../../appBar/AppBar.dart';
 import 'WriteComponents.dart';
 
 class WriteScreen extends StatelessWidget {
@@ -26,7 +26,7 @@ class WriteScreen extends StatelessWidget {
           child: AppBarr(
               name: name!,
               onTap: () {
-                Audios().playAudio('audios/ring2-mp3-6551.mp3');
+                Audios().playAudio('audios/phoneBell.mp3');
               })),
       body: GetBuilder<WriteController>(
           init: WriteController(),
@@ -42,7 +42,7 @@ class WriteScreen extends StatelessWidget {
                         Expanded(
                             child: WriteComponents().kCustomButton(
                                 img: 'assets/pencil.png',
-                                name: 'Write',
+                                name: 'Write'.tr,
                                 onTap: () {
                                   controller.updateEraser(Colors.black);
                                 },
@@ -50,7 +50,7 @@ class WriteScreen extends StatelessWidget {
                         Expanded(
                             child: WriteComponents().kCustomButton(
                                 img: 'assets/erase.png',
-                                name: 'Erase',
+                                name: 'Erase'.tr,
                                 onTap: () {
                                   controller.updateEraser(Colors.white);
                                 },
@@ -58,7 +58,7 @@ class WriteScreen extends StatelessWidget {
                         Expanded(
                             child: WriteComponents().kCustomButton(
                                 img: 'assets/new.png',
-                                name: 'New Page',
+                                name: 'New Page'.tr,
                                 onTap: () {
                                   controller.drawingPoint!.value.clear();
                                   controller.updateEraser(Colors.black);

@@ -7,8 +7,8 @@ import 'package:howsfeeling/Components/Components.dart';
 import 'package:howsfeeling/Views/Screens/Gender/GenderController.dart';
 
 import '../../../../../Audios/Audios.dart';
-import '../../../../../utils/AppColors.dart';
-import '../../../appBar/AppBar.dart';
+
+import '../../../../../appBar/AppBar.dart';
 import 'MyConditionController.dart';
 
 class MyConditionScreen extends StatefulWidget {
@@ -44,7 +44,7 @@ class _MyConditionScreenState extends State<MyConditionScreen> {
         appBar: PreferredSize(
             child: AppBarr(name: widget.name,onTap:
                   () {
-                Audios().playAudio('audios/ring2-mp3-6551.mp3');
+                Audios().playAudio('audios/phoneBell.mp3');
 
             }),
             preferredSize: Size.fromHeight(55)),
@@ -65,7 +65,7 @@ class _MyConditionScreenState extends State<MyConditionScreen> {
                   .newCategoriesList[widget.index!]['dataList'].length,
 //myConditionList.length,
               itemBuilder: (cxt, i) {
-                return kGridView(
+                return kGridViewContainer(
                     name: controller
                         .newCategoriesList[widget.index!]['dataList'][i].name,
                     img: controller
@@ -115,7 +115,7 @@ class _MyConditionScreenState extends State<MyConditionScreen> {
     //                   .newCategoriesList[widget.index!]['dataList'].length,
     //               //myConditionList.length,
     //               itemBuilder: (cxt, i) {
-    //                 return kGridView(
+    //                 return kGridViewContainer(
     //                     name: controller
     //                         .newCategoriesList[widget.index!]['dataList']
     //                             [i]

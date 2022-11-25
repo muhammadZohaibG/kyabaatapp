@@ -3,8 +3,9 @@ import 'package:get/get.dart';
 import 'package:howsfeeling/Audios/Audios.dart';
 import 'package:howsfeeling/Views/Screens/HandShakeBell/HandShakebellController.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Pain/PainCategoriesScreen.dart';
-import 'package:howsfeeling/Views/Screens/appBar/AppBar.dart';
 import 'package:sensors_plus/sensors_plus.dart';
+
+import '../../../appBar/AppBar.dart';
 
 class HandShakeBell extends StatefulWidget {
   const HandShakeBell({Key? key}) : super(key: key);

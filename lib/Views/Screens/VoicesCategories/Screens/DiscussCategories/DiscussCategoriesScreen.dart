@@ -5,8 +5,8 @@ import 'package:howsfeeling/Audios/Audios.dart';
 import 'package:howsfeeling/Views/Screens/Gender/GenderController.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/DiscussCategories/DiscussCategoriesController.dart';
 
+import '../../../../../appBar/AppBar.dart';
 import '../../../../../utils/AppColors.dart';
-import '../../../appBar/AppBar.dart';
 
 class DiscussCategoriesScreen extends StatelessWidget {
   String? name;
@@ -24,7 +24,7 @@ class DiscussCategoriesScreen extends StatelessWidget {
           preferredSize: Size.fromHeight(55),
           child: AppBarr(
             name: name,onTap: (){
-            Audios().playAudio('audios/ring2-mp3-6551.mp3');
+            Audios().playAudio('audios/phoneBell.mp3');
 
           },
           )),

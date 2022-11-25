@@ -1,11 +1,13 @@
 const Map<String, String> urdu = {
+  'English':'انگریزی',
+  'Urdu':'اردو',
   'Male': 'آدمی',
   'Woman': 'عورت',
-  'Who you are? ': 'تم کون ہو؟',
-  'Scenarios ': 'منظرنامے',
-  'My Condition ': 'میری حالت',
-  'Need ': 'ضرورت',
-  'Call to ': 'پر کال کریں',
+  'Who you are?': 'تم کون ہو؟',
+  'Scenarios': 'منظرنامے',
+  'My Condition': 'میری حالت',
+  'Need': 'ضرورت',
+  'Call to': 'پر کال کریں',
   'Clean': 'صاف',
   'Pain': 'درد',
   'Discuss': 'بحث کریں',
@@ -18,7 +20,7 @@ const Map<String, String> urdu = {
   'Feeling Fear': 'خوف محسوس کرنا',
   'Feeling Better': 'بہتر محسوس کرنا',
   'Feeling Bad': 'برا لگنا',
-  'Don’t Know': 'نہیں جانتے',
+  "Don't Know": 'نہیں جانتے',
   'Don’t Go': 'مت جاؤ',
   'Sit me down': 'مجھے بیٹھو',
   'Lay me down': 'مجھے نیچے لٹا دو',
@@ -55,6 +57,7 @@ const Map<String, String> urdu = {
   'Tell again': 'دوبارہ بتائیں',
   'Speak Slowly': 'اہستہ بولو',
   'Speak Loudly': 'زور سے بولو',
+  'Select Language': 'زبان منتخب کریں'
 
 
 };

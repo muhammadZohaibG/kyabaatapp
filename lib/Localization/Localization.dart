@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../Translations/English_US.dart';
+import '../Translations/Urdu_PK.dart';
+
 class LocalizationServices extends Translations{
 
-  static final locale = Locale('eng', 'US');
-  static final fallbackLocale = Locale('urdu', 'PK');
+  static final locale = Locale('English', 'US');
+  static final fallbackLocale = Locale('Urdu', 'PK');
 
   static final Langs = ['English', 'Urdu'];
 
-  static final locales = [Locale('eng', 'US'), Locale('urdu', 'PK')];
+  static final locales = [Locale('English', 'US'), Locale('Urdu', 'PK')];
 
   @override
   // TODO: implement keys
-  Map<String, Map<String, String>> get keys => throw UnimplementedError();
+  Map<String, Map<String, String>> get keys => {
+    'English_US' : english,
+    'Urdu_PK' : urdu,
+  };
 
   void changeLocale(String lang) {
     final locale = _getLocateFromLanguages(lang);

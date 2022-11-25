@@ -1,4 +1,7 @@
 const Map<String,String> english={
+  'English':'English',
+  'Write' : 'Write',
+  'Urdu':'Urdu',
   'Male': 'Male',
   'Woman': 'Woman',
   'Who you are? ': 'Who you are?',
@@ -45,13 +48,16 @@ const Map<String,String> english={
   'Extreme': 'Extreme',
   'Medium': 'Medium',
   'Light': 'Light',
-  'New Page': 'Erase',
+
+  'Erase': 'Erase',
+  'New Page': 'New Page',
   'Yes': 'Yes',
   'No': 'No',
   'Explain in Detail': 'Explain in Detail',
   'Tell again': 'Explain in Detail',
   'Speak Slowly': 'Speak Slowly',
   'Speak Loudly': 'Speak Loudly',
+  'Select Language': 'Select Language',
 
 
 

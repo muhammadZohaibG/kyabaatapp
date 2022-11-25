@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:howsfeeling/Views/Screens/Gender/GenderController.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Pain/painCategoriesController.dart';
-import 'package:howsfeeling/Views/Screens/appBar/AppBar.dart';
 
 import '../../../../../Audios/Audios.dart';
+import '../../../../../appBar/AppBar.dart';
 import '../../../../../utils/appColors.dart';
 import 'PainCategoriesComponents.dart';
 
@@ -35,7 +35,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: PreferredSize(preferredSize: Size.fromHeight(55), child: AppBarr(name: widget.name.toString(),onTap: (){
-        Audios().playAudio('audios/ring2-mp3-6551.mp3');
+        Audios().playAudio('audios/phoneBell.mp3');
 
       })),
 
@@ -47,7 +47,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
             margin: EdgeInsets.only(top: 10),
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                PainCategoriesComponents().kCustomButtom(name: 'Numb',onTap: (){
+                PainCategoriesComponents().kCustomButtom(name: 'Numb'.tr,onTap: (){
                   if(genderController.isSelected==false){
                     controller.playAudio('audios/menAudios/pain/numb.mp3');
                   }else{
@@ -55,7 +55,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
 
                   }
                 }),
-                PainCategoriesComponents().kCustomButtom(name: 'Itching',onTap: (){
+                PainCategoriesComponents().kCustomButtom(name: 'Itching'.tr,onTap: (){
                   if(genderController.isSelected==false){
                     controller.playAudio('audios/menAudios/pain/itching.mp3');
                   }else{
@@ -63,7 +63,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
 
                   }
                 }),
-                PainCategoriesComponents().kCustomButtom(name: 'Pain',onTap: (){
+                PainCategoriesComponents().kCustomButtom(name: 'Pain'.tr,onTap: (){
                   if(genderController.isSelected==false){
                     controller.playAudio('audios/menAudios/pain/pain.mp3');
                   }else{
@@ -86,13 +86,13 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
           ),
           child: Column(
             children: [
-              Image.asset('assets/painnbody.png', height: MediaQuery.of(context).orientation ==Orientation.portrait
+              Image.asset('assets/painnbody.png'.tr, height: MediaQuery.of(context).orientation ==Orientation.portrait
                   ? MediaQuery.of(context).size.height*0.4:MediaQuery.of(context).size.height*0.35,),
               Padding(
                 padding:  EdgeInsets.symmetric( horizontal: MediaQuery.of(context).orientation ==Orientation.portrait?0:MediaQuery.of(context).size.width*0.37),
                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    TextButton(child: Text('Front',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
+                    TextButton(child: Text('Front'.tr,style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
                       if(genderController.isSelected==false){
                         controller.playAudio('audios/menAudios/pain/front.mp3');
                       }else{
@@ -100,7 +100,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
 
                       }
                     }),
-                    TextButton(child: Text('Back',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
+                    TextButton(child: Text('Back'.tr,style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14,color: Colors.grey)),onPressed: (){
                       if(genderController.isSelected==false){
                         controller.playAudio('audios/menAudios/pain/back.mp3');
                       }else{
@@ -117,7 +117,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
           Container(child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              PainCategoriesComponents().kCustomButtom1(name: 'Extreme',color: Colors.red,onTap: (){
+              PainCategoriesComponents().kCustomButtom1(name: 'Extreme'.tr,color: Colors.red,onTap: (){
                 if(genderController.isSelected==false){
                   controller.playAudio('audios/menAudios/pain/extreme.mp3');
                 }else{
@@ -125,7 +125,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
 
                 }
               }),
-              PainCategoriesComponents().kCustomButtom1(name: 'Medium',color: Colors.orange,onTap: (){
+              PainCategoriesComponents().kCustomButtom1(name: 'Medium'.tr,color: Colors.orange,onTap: (){
                 if(genderController.isSelected==false){
                   controller.playAudio('audios/menAudios/pain/medium.mp3');
                 }else{
@@ -133,7 +133,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
 
                 }
               }),
-              PainCategoriesComponents().kCustomButtom1(name: 'Light',color: Colors.green,onTap: (){
+              PainCategoriesComponents().kCustomButtom1(name: 'Light'.tr,color: Colors.green,onTap: (){
                 if(genderController.isSelected==false){
                   controller.playAudio('audios/menAudios/pain/light.mp3');
                 }else{

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:howsfeeling/Binding/Bindings.dart';
+import 'package:howsfeeling/Localization/Localization.dart';
 import 'package:howsfeeling/Views/Screens/splashScreen.dart';
 
 void main() {
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      locale: LocalizationServices.locale,
+      fallbackLocale: LocalizationServices.fallbackLocale,
+      translations: LocalizationServices(),
       debugShowCheckedModeBanner: false,
       title: 'Kya Baat',
       theme: ThemeData(
