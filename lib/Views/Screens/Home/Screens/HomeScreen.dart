@@ -57,13 +57,13 @@ class HomeScreen extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.notifications_active),
                 onPressed: (){
-                  Get.to(()=>HandShakeBell());
+                  Get.to(()=>const HandShakeBell());
                   // Audios().playAudio('audios/phoneBell.mp3');
                 },),
               IconButton(
                 icon: const Icon(Icons.language),
                 onPressed: (){
-                  Get.off(()=>Languages());
+                  Get.off(()=>const Languages());
                 },),
             ],
           ),
