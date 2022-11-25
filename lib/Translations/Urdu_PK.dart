@@ -54,7 +54,7 @@ const Map<String, String> urdu = {
   'Yes': 'جی ہاں',
   'No': 'نہیں',
   'Explain in Detail': 'تفصیل سے بیان کریں',
-  'Tell again': 'دوبارہ بتائیں',
+  'Tell Again': 'دوبارہ بتائیں',
   'Speak Slowly': 'اہستہ بولو',
   'Speak Loudly': 'زور سے بولو',
   'Select Language': 'زبان منتخب کریں'

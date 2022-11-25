@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 import 'package:howsfeeling/Localization/Localization.dart';
 import 'package:howsfeeling/Views/Screens/Languages/LanguageController.dart';
 import 'package:howsfeeling/utils/AppColors.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../Audios/Audios.dart';
 import '../../../appBar/AppBar.dart';
+import '../../../utils/global.dart';
 import 'LanguagesComponents.dart';
 
 class Languages extends StatefulWidget {
@@ -34,15 +36,21 @@ class _LanguagesState extends State<Languages> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LanguageComponents()
-                .kLanguageCustomButton(name: 'English'.tr, onTap: () {
+                .kLanguageCustomButton(name: 'English'.tr, onTap: () async{
               controller.changeLanguage('English');
+              final pref=  await  SharedPreferences.getInstance();
+              pref.setString(LANG, 'English');
+              pref.setString(CODE, 'US');
             }),
             const SizedBox(
               height: 20,
             ),
             LanguageComponents()
-                .kLanguageCustomButton(name: 'Urdu'.tr, onTap: () {
+                .kLanguageCustomButton(name: 'Urdu'.tr, onTap: () async {
              controller.changeLanguage('Urdu');
+             final pref=  await  SharedPreferences.getInstance();
+             pref.setString(LANG, 'Urdu');
+             pref.setString(CODE, 'PK');
               print('Urdu');
 
             })
