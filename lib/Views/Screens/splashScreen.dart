@@ -32,13 +32,14 @@ class _SplasScreenState extends State<SplasScreen> {
   void getLanguage() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    String? lang = prefs.getString(LANG);
+    selectedLang = prefs.getString(LANG);
     String? code = prefs.getString(CODE);
 
-    if (lang == null && code == null) {
+    if (selectedLang == null && code == null) {
       // prefs.getBool("key",true);
     } else {
-      var locale = Locale(lang!, code);
+      print('Lang is : ${selectedLang}');
+      var locale = Locale(selectedLang!, code);
       Get.updateLocale(locale);
     }
   }

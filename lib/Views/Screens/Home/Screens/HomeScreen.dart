@@ -11,6 +11,8 @@ import 'package:howsfeeling/Views/Screens/Languages/LanguagesScreen.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/DiscussCategories/DiscussCategoriesScreen.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Pain/PainCategoriesScreen.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Write/WriteScreen.dart';
+import 'package:howsfeeling/utils/global.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../Components/Components.dart';
 import '../../../../utils/AppColors.dart';
@@ -19,12 +21,13 @@ import '../../VoicesCategories/Screens/MyConditions/MyConditionScreen.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
 
-  HomeComponents _homeComponents = HomeComponents();
 
   // final controller = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
+    print("My LANGUAGE IS $selectedLang");
+
     return Scaffold(
       backgroundColor: AppColors.bgColor,
 
@@ -44,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                   AppColors.gredientColor1
                 ]),
           ),
-        ),
+        ), 
         automaticallyImplyLeading: true,
         title:   Text(
           'Scenarios'.tr,
@@ -102,6 +105,7 @@ class HomeScreen extends StatelessWidget {
                       name: controller.homeModelList[i].name,
                       img: controller.homeModelList[i].img,
                       onTap: () {
+
 
                         // print("object : ${genderController.isSelected.value}");
                         //  if(i==0){

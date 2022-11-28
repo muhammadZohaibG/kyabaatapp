@@ -15,7 +15,7 @@ const Map<String,String> english={
   'Normal': 'Normal',
   'Feeling Pain': 'Feeling Pain',
   'Feeling Cold': 'Feeling Cold',
-  'Sweating': 'Feeling Cold',
+  'Sweating': 'Sweating',
   'Fever': 'Fever',
   'Feeling Fear': 'Feeling Fear',
   'Feeling Better': 'Feeling Better',

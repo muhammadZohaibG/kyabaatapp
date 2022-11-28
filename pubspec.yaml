@@ -82,6 +82,10 @@ flutter:
     - assets/audios/womenAudios/pain/
     - assets/audios/menAudios/discuss/
     - assets/audios/womenAudios/discuss/
+    - assets/audios/menAudios/urduLanguage/myCondition/
+    - assets/audios/menAudios/urduLanguage/need/
+    - assets/audios/womenAudios/urduLanguage/myCondition/
+    - assets/audios/womenAudios/urduLanguage/need/
 
   #   - images/a_dot_ham.jpeg
 

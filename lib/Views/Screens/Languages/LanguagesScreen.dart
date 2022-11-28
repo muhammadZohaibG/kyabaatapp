@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:howsfeeling/AppPrefrences/AppPrefs.dart';
 import 'package:howsfeeling/Localization/Localization.dart';
 import 'package:howsfeeling/Views/Screens/Languages/LanguageController.dart';
 import 'package:howsfeeling/utils/AppColors.dart';
@@ -41,17 +42,21 @@ class _LanguagesState extends State<Languages> {
               final pref=  await  SharedPreferences.getInstance();
               pref.setString(LANG, 'English');
               pref.setString(CODE, 'US');
+              selectedLang =  pref.getString(LANG);
+
+
+
+
             }),
             const SizedBox(
               height: 20,
             ),
             LanguageComponents()
                 .kLanguageCustomButton(name: 'Urdu'.tr, onTap: () async {
-             controller.changeLanguage('Urdu');
+               controller.changeLanguage('Urdu');
              final pref=  await  SharedPreferences.getInstance();
              pref.setString(LANG, 'Urdu');
-             pref.setString(CODE, 'PK');
-              print('Urdu');
+            selectedLang =  pref.getString(LANG);
 
             })
           ],
