@@ -36,6 +36,10 @@ class _SplasScreenState extends State<SplasScreen> {
     String? code = prefs.getString(CODE);
 
     if (selectedLang == null && code == null) {
+      var locale = Locale('Urdu', 'PK');
+      Get.updateLocale(locale);
+
+
       // prefs.getBool("key",true);
     } else {
       print('Lang is : ${selectedLang}');
