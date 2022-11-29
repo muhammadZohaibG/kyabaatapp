@@ -57,6 +57,7 @@ const Map<String,String> english={
   'Speak Slowly': 'Speak Slowly',
   'Speak Loudly': 'Speak Loudly',
   'Select Language': 'Select Language',
+  'Remove the drap' : 'Remove the drap',
 
 
 

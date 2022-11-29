@@ -135,7 +135,7 @@ class MyConditionController extends GetxController {
             name: 'Don’t Go'.tr,
             image: 'assets/dontGo.png',
             menVoice: selectedLang == 'Urdu'
-                ? 'audios/womenAudios/urduLanguage/need/dontKnow.m4a'
+                ? 'audios/menAudios/urduLanguage/need/dontgo.mp3'
                 : 'audios/menAudios/need/dontGo.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/need/dontGo.m4a'
@@ -144,7 +144,7 @@ class MyConditionController extends GetxController {
             name: 'Sit me down'.tr,
             image: 'assets/sitmeDown.png',
             menVoice: selectedLang == 'Urdu'
-                ? 'audios/womenAudios/urduLanguage/need/dontKnow.m4a'
+                ? 'audios/menAudios/urduLanguage/need/sitDown.mp3'
                 : 'audios/menAudios/need/sitMeDown.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/need/sitDown.m4a'
@@ -153,7 +153,7 @@ class MyConditionController extends GetxController {
             name: 'Lay me down'.tr,
             image: 'assets/laymeDown.png',
             menVoice: selectedLang == 'Urdu'
-                ? 'audios/menAudios/urduLanguage/need/dontKnow.m4a'
+                ? 'audios/menAudios/urduLanguage/need/layDown.m4a'
                 : 'audios/menAudios/need/layMeDown.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/need/layDOwn.m4a'
@@ -162,7 +162,7 @@ class MyConditionController extends GetxController {
             name: 'Right crotch'.tr,
             image: 'assets/rightCrotch.png',
             menVoice: selectedLang == 'Urdu'
-                ? 'audios/menAudios/urduLanguage/need/dontKnow.m4a'
+                ? 'audios/menAudios/urduLanguage/need/right.m4a'
                 : 'audios/menAudios/need/rightCrotch.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/need/right.m4a'
@@ -171,7 +171,7 @@ class MyConditionController extends GetxController {
             name: 'Left Crotch'.tr,
             image: 'assets/leftCrotch.png',
             menVoice: selectedLang == 'Urdu'
-                ? 'audios/menAudios/urduLanguage/need/dontKnow.m4a'
+                ? 'audios/menAudios/urduLanguage/need/left.m4a'
                 : 'audios/menAudios/need/leftCrotch.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/need/left.m4a'
@@ -180,7 +180,7 @@ class MyConditionController extends GetxController {
             name: 'Remove the drap'.tr,
             image: 'assets/remmoveDrap.png',
             menVoice: selectedLang == 'Urdu'
-                ? 'audios/menAudios/urduLanguage/need/dontKnow.m4a'
+                ? 'audios/menAudios/urduLanguage/need/drip.m4a'
                 : 'audios/menAudios/need/removeTheDrap.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/need/drap.m4a'
@@ -220,7 +220,7 @@ class MyConditionController extends GetxController {
         CategoriesModel(
             name: 'Doctor'.tr,
             image: 'assets/dr.png',
-            menVoice: 'audios/menAudios/callTo/dr.mp3',
+            menVoice: 'audios/menAudios/callTo/doctor.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/callTo/dr.mp3'
                 : 'audios/womenAudios/callTo/doctor.mp3'),
@@ -248,7 +248,8 @@ class MyConditionController extends GetxController {
         CategoriesModel(
             name: 'Family'.tr,
             image: 'assets/family.png',
-            menVoice: 'audios/menAudios/callTo/family.mp3',
+            menVoice:selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/callTo/family.mp3' :'audios/menAudios/callTo/family.mp3',
             womenVoice:selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/callTo/family.mp3'
                 : 'audios/womenAudios/callTo/family.mp3'),
@@ -260,49 +261,56 @@ class MyConditionController extends GetxController {
         CategoriesModel(
             name: 'Body'.tr,
             image: 'assets/body.png',
-            menVoice: 'audios/menAudios/clean/body.mp3',
+            menVoice:selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/clean/jism.mp3' : 'audios/menAudios/clean/body.mp3',
             womenVoice:  selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/clean/body.mp3'
                 :'audios/womenAudios/clean/body.mp3'),
         CategoriesModel(
             name: 'Teeth'.tr,
             image: 'assets/teeth.png',
-            menVoice: 'audios/menAudios/clean/teeth.mp3',
+            menVoice:selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/clean/teeth.mp3' : 'audios/menAudios/clean/teeth.mp3',
             womenVoice:selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/clean/teeth.mp3'
                 : 'audios/womenAudios/clean/teeth.mp3'),
         CategoriesModel(
             name: 'Head'.tr,
             image: 'assets/head.png',
-            menVoice: 'audios/menAudios/clean/head.mp3',
+            menVoice: selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/clean/sar.mp3' :'audios/menAudios/clean/head.mp3',
             womenVoice:selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/clean/head.mp3'
                 : 'audios/womenAudios/clean/head.mp3'),
         CategoriesModel(
             name: 'Hands'.tr,
             image: 'assets/hands.png',
-            menVoice: 'audios/menAudios/clean/hands.mp3',
+            menVoice:selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/clean/hand.mp3' : 'audios/menAudios/clean/hands.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/clean/hand.mp3'
                 :'audios/womenAudios/clean/hands.mp3'),
         CategoriesModel(
             name: 'Face'.tr,
             image: 'assets/face.png',
-            menVoice: 'audios/menAudios/clean/face.mp3',
+            menVoice:selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/clean/face.mp3' : 'audios/menAudios/clean/face.mp3',
             womenVoice: selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/clean/face.mp3'
                 :'audios/womenAudios/clean/face.mp3'),
         CategoriesModel(
             name: 'Legs'.tr,
             image: 'assets/legs.png',
-            menVoice: 'audios/menAudios/clean/legs.mp3',
+            menVoice:selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/clean/legs.mp3' : 'audios/menAudios/clean/legs.mp3',
             womenVoice:selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/clean/leg.mp3'
                 : 'audios/womenAudios/clean/legs.mp3'),
         CategoriesModel(
             name: 'Nose'.tr,
             image: 'assets/nose.png',
-            menVoice: 'audios/menAudios/clean/nose.mp3',
+            menVoice: selectedLang == 'Urdu'
+                ? 'audios/menAudios/urduLanguage/clean/nose.mp3' :'audios/menAudios/clean/nose.mp3',
             womenVoice:selectedLang == 'Urdu'
                 ? 'audios/womenAudios/urduLanguage/clean/nose.mp3'
                 : 'audios/womenAudios/clean/nose.mp3'),

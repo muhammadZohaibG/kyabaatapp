@@ -28,7 +28,7 @@ class DiscussCategoriesController extends GetxController {
     DiscussCategoriesModel(
         name: 'Explain in Detail'.tr,
         menVoice: selectedLang == 'Urdu'
-            ? 'audios/menAudios/urduLanguage/discuss/yes.mp3'
+            ? 'audios/menAudios/urduLanguage/discuss/detail.mp3'
             : 'audios/menAudios/discuss/inDetail.mp3',
         womenVoice: selectedLang == 'Urdu'
             ? 'audios/womenAudios/urduLanguage/discuss/inDetail.mp3'
@@ -36,7 +36,7 @@ class DiscussCategoriesController extends GetxController {
     DiscussCategoriesModel(
         name: 'Tell Again'.tr,
         menVoice: selectedLang == 'Urdu'
-            ? 'audios/menAudios/urduLanguage/discuss/no.mp3'
+            ? 'audios/menAudios/urduLanguage/discuss/again.mp3'
             : 'audios/menAudios/discuss/tellAgain.mp3',
         womenVoice: selectedLang == 'Urdu'
             ? 'audios/womenAudios/urduLanguage/discuss/tellagain.mp3'
@@ -44,7 +44,7 @@ class DiscussCategoriesController extends GetxController {
     DiscussCategoriesModel(
         name: 'Speak Slowly'.tr,
         menVoice: selectedLang == 'Urdu'
-            ? 'audios/menAudios/urduLanguage/discuss/loudly.mp3'
+            ? 'audios/menAudios/urduLanguage/discuss/slowl.mp3'
             : 'audios/menAudios/discuss/speakSlowly.mp3',
         womenVoice: selectedLang == 'Urdu'
             ? 'audios/womenAudios/urduLanguage/discuss/slowly.mp3'

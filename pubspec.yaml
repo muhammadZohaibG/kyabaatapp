@@ -84,6 +84,10 @@ flutter:
     - assets/audios/womenAudios/discuss/
     - assets/audios/menAudios/urduLanguage/myCondition/
     - assets/audios/menAudios/urduLanguage/need/
+    - assets/audios/menAudios/urduLanguage/clean/
+    - assets/audios/menAudios/urduLanguage/callTo/
+    - assets/audios/menAudios/urduLanguage/pain/
+    - assets/audios/menAudios/urduLanguage/discuss/
     - assets/audios/womenAudios/urduLanguage/myCondition/
     - assets/audios/womenAudios/urduLanguage/need/
     - assets/audios/womenAudios/urduLanguage/callTo/

@@ -2,4 +2,4 @@
 
 String LANG='myLang';
  String CODE='myCode';
- String? selectedLang;
+ String? selectedLang = 'Urdu';

@@ -56,7 +56,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
 
                         selectedLang == 'Urdu'
                             ? controller
-                                .playAudio('audios/menAudios/pain/numb.mp3')
+                                .playAudio('audios/menAudios/urduLanguage/pain/numb.mp3')
                             : controller
                                 .playAudio('audios/menAudios/pain/numb.mp3');
                       } else {
@@ -74,7 +74,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                       if (genderController.isSelected == false) {
                         selectedLang == 'Urdu'
                             ? controller
-                            .playAudio('audios/menAudios/urduLanguage/pain/pain.mp3'):
+                            .playAudio('audios/menAudios/urduLanguage/pain/Itching.mp3'):
                         controller
                             .playAudio('audios/menAudios/pain/itching.mp3');
                       } else {
@@ -91,7 +91,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                       if (genderController.isSelected == false) {
                         selectedLang == 'Urdu'
                             ? controller
-                            .playAudio('audios/menAudios/urduLanguage/pain/Itching.mp3'):
+                            .playAudio('audios/menAudios/urduLanguage/pain/pain.mp3'):
                         controller.playAudio('audios/menAudios/pain/pain.mp3');
                       } else {
                         selectedLang == 'Urdu'
@@ -140,7 +140,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                             if (genderController.isSelected == false) {
                               selectedLang == 'Urdu'
                                   ? controller
-                                  .playAudio('audios/menAudios/urduLanguage/pain/pain.mp3'):
+                                  .playAudio('audios/menAudios/urduLanguage/pain/front.mp3'):
                               controller
                                   .playAudio('audios/menAudios/pain/front.mp3');
                             } else {
@@ -161,7 +161,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                             if (genderController.isSelected == false) {
                               selectedLang == 'Urdu'
                                   ? controller
-                                  .playAudio('audios/womenAudios/urduLanguage/pain/front.mp3'):
+                                  .playAudio('audios/menAudios/urduLanguage/pain/back.mp3'):
                               controller
                                   .playAudio('audios/menAudios/pain/back.mp3');
                             } else {
@@ -189,7 +189,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                     if (genderController.isSelected == false) {
                       selectedLang == 'Urdu'
                           ? controller
-                          .playAudio('audios/womenAudios/urduLanguage/pain/back.mp3'):
+                          .playAudio('audios/menAudios/urduLanguage/pain/extreme.mp3'):
                       controller.playAudio('audios/menAudios/pain/extreme.mp3');
                     } else {
                       selectedLang == 'Urdu'
@@ -206,7 +206,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                     if (genderController.isSelected == false) {
                       selectedLang == 'Urdu'
                           ? controller
-                          .playAudio('audios/womenAudios/urduLanguage/pain/extreme.mp3'):
+                          .playAudio('audios/menAudios/urduLanguage/pain/medium.mp3'):
                       controller.playAudio('audios/menAudios/pain/medium.mp3');
                     } else {
                       selectedLang == 'Urdu'
@@ -223,7 +223,7 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                     if (genderController.isSelected == false) {
                       selectedLang == 'Urdu'
                           ? controller
-                          .playAudio('audios/womenAudios/urduLanguage/pain/medium.mp3'):
+                          .playAudio('audios/menAudios/urduLanguage/pain/light.mp3'):
                       controller.playAudio('audios/menAudios/pain/light.mp3');
                     } else {
                       selectedLang == 'Urdu'
