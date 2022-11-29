@@ -57,19 +57,15 @@ class DiscussCategoriesScreen extends StatelessWidget {
                     }
                   },
                   child: Container(
-                    // height: 100,
-                    // width: 90,
+                    alignment: Alignment.center,
                     color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 17,horizontal: 18),
-                      child: Text(
-                        controller.discusscategoriesModelList[i].name
-                            .toString(),
-                        textAlign: TextAlign.center,
-                        style:const TextStyle(
-                          overflow: TextOverflow.ellipsis,
-                            fontSize: 17, fontWeight: FontWeight.w600,color: AppColors.appColor),
-                      ),
+                    child: Text(
+                      controller.discusscategoriesModelList[i].name
+                          .toString(),
+                      textAlign: TextAlign.center,
+                      style:const TextStyle(
+                        overflow: TextOverflow.ellipsis,
+                          fontSize: 17, fontWeight: FontWeight.w600,color: AppColors.appColor),
                     ),
                   ),
                 );
