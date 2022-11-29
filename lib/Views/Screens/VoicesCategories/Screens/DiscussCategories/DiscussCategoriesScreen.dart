@@ -34,7 +34,7 @@ class DiscussCategoriesScreen extends StatelessWidget {
           children: [
             GridView.builder(
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                mainAxisExtent: 70,
+                mainAxisExtent: 60,
                 // crossAxisCount: 2,
                 childAspectRatio: 0.5,
                 mainAxisSpacing: 8,
@@ -61,12 +61,13 @@ class DiscussCategoriesScreen extends StatelessWidget {
                     // width: 90,
                     color: Colors.white,
                     child: Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.symmetric(vertical: 17,horizontal: 18),
                       child: Text(
                         controller.discusscategoriesModelList[i].name
                             .toString(),
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style:const TextStyle(
+                          overflow: TextOverflow.ellipsis,
                             fontSize: 17, fontWeight: FontWeight.w600,color: AppColors.appColor),
                       ),
                     ),
