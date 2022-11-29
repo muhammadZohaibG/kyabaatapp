@@ -17,7 +17,7 @@ class DiscussCategoriesController extends GetxController {
             ? 'audios/menAudios/discuss/yes.mp3'
             : 'audios/menAudios/urduLanguage/discuss/yes.mp3',
         womenVoice: selectedLang == 'English'
-            ? 'audios/menAudios/discuss/yes.mp3'
+            ? 'audios/womenAudios/discuss/yes.mp3'
             : 'audios/womenAudios/urduLanguage/discuss/yes.mp3'),
     DiscussCategoriesModel(
         name: 'No'.tr,
