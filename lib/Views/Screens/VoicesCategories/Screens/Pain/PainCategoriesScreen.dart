@@ -54,51 +54,51 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                     onTap: () {
                       if (genderController.isSelected == false) {
 
-                        selectedLang == 'Urdu'
-                            ? controller
+                        selectedLang == 'English'
+                            ?controller
+                            .playAudio('audios/menAudios/pain/numb.mp3'): controller
                                 .playAudio('audios/menAudios/urduLanguage/pain/numb.mp3')
-                            : controller
-                                .playAudio('audios/menAudios/pain/numb.mp3');
+                              ;
                       } else {
 
-                        selectedLang == 'Urdu'
-                            ? controller
-                            .playAudio('audios/womenAudios/urduLanguage/pain/numb.mp3'):
-                        controller
-                            .playAudio('audios/womenAudios/pain/numb.mp3');
+                        selectedLang == 'English'
+                            ?controller
+                            .playAudio('audios/womenAudios/pain/numb.mp3'): controller
+                            .playAudio('audios/womenAudios/urduLanguage/pain/numb.mp3')
+                        ;
                       }
                     }),
                 PainCategoriesComponents().kCustomButtom(
                     name: 'Itching'.tr,
                     onTap: () {
                       if (genderController.isSelected == false) {
-                        selectedLang == 'Urdu'
-                            ? controller
-                            .playAudio('audios/menAudios/urduLanguage/pain/Itching.mp3'):
-                        controller
-                            .playAudio('audios/menAudios/pain/itching.mp3');
+                        selectedLang == 'English'
+                            ?controller
+                            .playAudio('audios/menAudios/pain/itching.mp3'): controller
+                            .playAudio('audios/menAudios/urduLanguage/pain/Itching.mp3')
+                        ;
                       } else {
-                        selectedLang == 'Urdu'
-                            ? controller
-                            .playAudio('audios/womenAudios/urduLanguage/pain/Itching.mp3'):
-                        controller
-                            .playAudio('audios/womenAudios/pain/itching.mp3');
+                        selectedLang == 'English'
+                            ?controller
+                            .playAudio('audios/womenAudios/pain/itching.mp3'): controller
+                            .playAudio('audios/womenAudios/urduLanguage/pain/Itching.mp3')
+                        ;
                       }
                     }),
                 PainCategoriesComponents().kCustomButtom(
                     name: 'Pain'.tr,
                     onTap: () {
                       if (genderController.isSelected == false) {
-                        selectedLang == 'Urdu'
-                            ? controller
-                            .playAudio('audios/menAudios/urduLanguage/pain/pain.mp3'):
-                        controller.playAudio('audios/menAudios/pain/pain.mp3');
+                        selectedLang == 'English'
+                            ?controller.playAudio('audios/menAudios/pain/pain.mp3'): controller
+                            .playAudio('audios/menAudios/urduLanguage/pain/pain.mp3')
+                        ;
                       } else {
-                        selectedLang == 'Urdu'
-                            ? controller
-                            .playAudio('audios/womenAudios/urduLanguage/pain/pain.mp3'):
-                        controller
-                            .playAudio('audios/womenAudios/pain/pain.mp3');
+                        selectedLang == 'English'
+                            ?controller
+                            .playAudio('audios/womenAudios/pain/pain.mp3'): controller
+                            .playAudio('audios/womenAudios/urduLanguage/pain/pain.mp3')
+                        ;
                       }
                     }),
               ],
@@ -138,17 +138,17 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                                   color: Colors.grey)),
                           onPressed: () {
                             if (genderController.isSelected == false) {
-                              selectedLang == 'Urdu'
-                                  ? controller
-                                  .playAudio('audios/menAudios/urduLanguage/pain/front.mp3'):
-                              controller
-                                  .playAudio('audios/menAudios/pain/front.mp3');
+                              selectedLang == 'English'
+                                  ?controller
+                                  .playAudio('audios/menAudios/pain/front.mp3'): controller
+                                  .playAudio('audios/menAudios/urduLanguage/pain/front.mp3')
+                              ;
                             } else {
-                              selectedLang == 'Urdu'
-                                  ? controller
-                                  .playAudio('audios/womenAudios/urduLanguage/pain/front.mp3'):
-                              controller.playAudio(
-                                  'audios/womenAudios/pain/front.mp3');
+                              selectedLang == 'English'
+                                  ?controller.playAudio(
+                            'audios/womenAudios/pain/front.mp3'): controller
+                                  .playAudio('audios/womenAudios/urduLanguage/pain/front.mp3')
+                              ;
                             }
                           }),
                       TextButton(
@@ -159,17 +159,17 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                                   color: Colors.grey)),
                           onPressed: () {
                             if (genderController.isSelected == false) {
-                              selectedLang == 'Urdu'
-                                  ? controller
-                                  .playAudio('audios/menAudios/urduLanguage/pain/back.mp3'):
-                              controller
-                                  .playAudio('audios/menAudios/pain/back.mp3');
+                              selectedLang == 'English'
+                                  ?controller
+                                  .playAudio('audios/menAudios/pain/back.mp3'): controller
+                                  .playAudio('audios/menAudios/urduLanguage/pain/back.mp3')
+                              ;
                             } else {
-                              selectedLang == 'Urdu'
-                                  ? controller
-                                  .playAudio('audios/womenAudios/urduLanguage/pain/back.mp3'):
-                              controller.playAudio(
-                                  'audios/womenAudios/pain/back.mp3');
+                              selectedLang == 'English'
+                                  ?controller.playAudio(
+                                  'audios/womenAudios/pain/back.mp3'): controller
+                                  .playAudio('audios/womenAudios/urduLanguage/pain/back.mp3')
+                              ;
                             }
                           }),
                     ],
@@ -187,16 +187,16 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                   color: Colors.red,
                   onTap: () {
                     if (genderController.isSelected == false) {
-                      selectedLang == 'Urdu'
-                          ? controller
-                          .playAudio('audios/menAudios/urduLanguage/pain/extreme.mp3'):
-                      controller.playAudio('audios/menAudios/pain/extreme.mp3');
+                      selectedLang == 'English'
+                          ?controller.playAudio('audios/menAudios/pain/extreme.mp3'): controller
+                          .playAudio('audios/menAudios/urduLanguage/pain/extreme.mp3')
+                      ;
                     } else {
-                      selectedLang == 'Urdu'
-                          ? controller
-                          .playAudio('audios/womenAudios/urduLanguage/pain/extreme.mp3'):
-                      controller
-                          .playAudio('audios/womenAudios/pain/extreme.mp3');
+                      selectedLang == 'English'
+                          ?controller
+                          .playAudio('audios/womenAudios/pain/extreme.mp3'): controller
+                          .playAudio('audios/womenAudios/urduLanguage/pain/extreme.mp3')
+                      ;
                     }
                   }),
               PainCategoriesComponents().kCustomButtom1(
@@ -204,16 +204,16 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                   color: Colors.orange,
                   onTap: () {
                     if (genderController.isSelected == false) {
-                      selectedLang == 'Urdu'
-                          ? controller
-                          .playAudio('audios/menAudios/urduLanguage/pain/medium.mp3'):
-                      controller.playAudio('audios/menAudios/pain/medium.mp3');
+                      selectedLang == 'English'
+                          ? controller.playAudio('audios/menAudios/pain/medium.mp3'):controller
+                          .playAudio('audios/menAudios/urduLanguage/pain/medium.mp3')
+                      ;
                     } else {
-                      selectedLang == 'Urdu'
+                      selectedLang == 'English'
                           ? controller
-                          .playAudio('audios/womenAudios/urduLanguage/pain/medium.mp3'):
-                      controller
-                          .playAudio('audios/womenAudios/pain/medium.mp3');
+                          .playAudio('audios/womenAudios/pain/medium.mp3'): controller
+                          .playAudio('audios/womenAudios/urduLanguage/pain/medium.mp3')
+                     ;
                     }
                   }),
               PainCategoriesComponents().kCustomButtom1(
@@ -221,15 +221,15 @@ class _PainCategoriesScreenState extends State<PainCategoriesScreen> {
                   color: Colors.green,
                   onTap: () {
                     if (genderController.isSelected == false) {
-                      selectedLang == 'Urdu'
-                          ? controller
-                          .playAudio('audios/menAudios/urduLanguage/pain/light.mp3'):
-                      controller.playAudio('audios/menAudios/pain/light.mp3');
+                      selectedLang == 'English'
+                          ?controller.playAudio('audios/menAudios/pain/light.mp3'): controller
+                          .playAudio('audios/menAudios/urduLanguage/pain/light.mp3')
+                      ;
                     } else {
-                      selectedLang == 'Urdu'
-                          ? controller
-                          .playAudio('audios/womenAudios/urduLanguage/pain/light.mp3'):
-                      controller.playAudio('audios/womenAudios/pain/light.mp3');
+                      selectedLang == 'English'
+                          ?controller.playAudio('audios/womenAudios/pain/light.mp3'): controller
+                          .playAudio('audios/womenAudios/urduLanguage/pain/light.mp3')
+                      ;
                     }
                   }),
             ],

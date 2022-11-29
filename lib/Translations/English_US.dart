@@ -59,6 +59,4 @@ const Map<String,String> english={
   'Select Language': 'Select Language',
   'Remove the drap' : 'Remove the drap',
 
-
-
 };
