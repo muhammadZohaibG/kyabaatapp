@@ -138,8 +138,8 @@ class MyConditionController extends GetxController {
                 ? 'audios/menAudios/need/dontGo.mp3'
                 : 'audios/menAudios/urduLanguage/need/dontgo.mp3',
             womenVoice: selectedLang == 'English'
-                ? 'audios/womenAudios/urduLanguage/need/dontGo.m4a'
-                : 'audios/womenAudios/need/dontGo.mp3'),
+                ?'audios/womenAudios/need/dontGo.mp3': 'audios/womenAudios/urduLanguage/need/dontGo.m4a'
+                ),
         CategoriesModel(
             name: 'Sit me down'.tr,
             image: 'assets/sitmeDown.png',
