@@ -265,7 +265,7 @@ class MyConditionController extends GetxController {
             menVoice: selectedLang == 'English'
                 ?'audios/menAudios/clean/body.mp3': 'audios/menAudios/urduLanguage/clean/jism.mp3'
                  ,
-            womenVoice: selectedLang == 'Urdu'
+            womenVoice: selectedLang == 'English'
                 ?'audios/womenAudios/clean/body.mp3': 'audios/womenAudios/urduLanguage/clean/body.mp3'
                  ),
         CategoriesModel(

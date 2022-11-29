@@ -14,49 +14,51 @@ class DiscussCategoriesController extends GetxController {
     DiscussCategoriesModel(
         name: 'Yes'.tr,
         menVoice: selectedLang == 'English'
-            ? 'audios/menAudios/discuss/yes.mp3': 'audios/menAudios/urduLanguage/discuss/yes.mp3'
-             ,
+            ? 'audios/menAudios/discuss/yes.mp3'
+            : 'audios/menAudios/urduLanguage/discuss/yes.mp3',
         womenVoice: selectedLang == 'English'
-            ?'audios/menAudios/discuss/yes.mp3': 'audios/womenAudios/urduLanguage/discuss/yes.mp3'
-             ),
+            ? 'audios/menAudios/discuss/yes.mp3'
+            : 'audios/womenAudios/urduLanguage/discuss/yes.mp3'),
     DiscussCategoriesModel(
         name: 'No'.tr,
-        menVoice:selectedLang == 'English'
-            ?'audios/menAudios/discuss/no.mp3': 'audios/menAudios/urduLanguage/discuss/no.mp3' ,
-        womenVoice:selectedLang == 'English'
-            ?'audios/womenAudios/discuss/no.mp3': 'audios/womenAudios/urduLanguage/discuss/no.mp3' ),
+        menVoice: selectedLang == 'English'
+            ? 'audios/menAudios/discuss/no.mp3'
+            : 'audios/menAudios/urduLanguage/discuss/no.mp3',
+        womenVoice: selectedLang == 'English'
+            ? 'audios/womenAudios/discuss/no.mp3'
+            : 'audios/womenAudios/urduLanguage/discuss/no.mp3'),
     DiscussCategoriesModel(
         name: 'Explain in Detail'.tr,
         menVoice: selectedLang == 'English'
-            ?'audios/menAudios/discuss/inDetail.mp3': 'audios/menAudios/urduLanguage/discuss/detail.mp3'
-              ,
+            ? 'audios/menAudios/discuss/inDetail.mp3'
+            : 'audios/menAudios/urduLanguage/discuss/detail.mp3',
         womenVoice: selectedLang == 'English'
-            ? 'audios/womenAudios/discuss/inDetail.mp3': 'audios/womenAudios/urduLanguage/discuss/inDetail.mp3'
-            ),
+            ? 'audios/womenAudios/discuss/inDetail.mp3'
+            : 'audios/womenAudios/urduLanguage/discuss/inDetail.mp3'),
     DiscussCategoriesModel(
         name: 'Tell Again'.tr,
         menVoice: selectedLang == 'English'
-            ?  'audios/menAudios/discuss/tellAgain.mp3':'audios/menAudios/urduLanguage/discuss/again.mp3'
-            ,
+            ? 'audios/menAudios/discuss/tellAgain.mp3'
+            : 'audios/menAudios/urduLanguage/discuss/again.mp3',
         womenVoice: selectedLang == 'English'
-            ?'audios/womenAudios/discuss/tellAgain.mp3': 'audios/womenAudios/urduLanguage/discuss/tellagain.mp3'
-             ),
+            ? 'audios/womenAudios/discuss/tellAgain.mp3'
+            : 'audios/womenAudios/urduLanguage/discuss/tellagain.mp3'),
     DiscussCategoriesModel(
         name: 'Speak Slowly'.tr,
         menVoice: selectedLang == 'English'
-            ?'audios/menAudios/discuss/speakSlowly.mp3': 'audios/menAudios/urduLanguage/discuss/slowl.mp3'
-             ,
+            ? 'audios/menAudios/discuss/speakSlowly.mp3'
+            : 'audios/menAudios/urduLanguage/discuss/slowl.mp3',
         womenVoice: selectedLang == 'English'
-            ?'audios/womenAudios/discuss/speakSlowly.mp3': 'audios/womenAudios/urduLanguage/discuss/slowly.mp3'
-            ),
+            ? 'audios/womenAudios/discuss/speakSlowly.mp3'
+            : 'audios/womenAudios/urduLanguage/discuss/slowly.mp3'),
     DiscussCategoriesModel(
         name: 'Speak Loudly'.tr,
         menVoice: selectedLang == 'English'
-            ?'audios/menAudios/discuss/speakLoudly.mp3': 'audios/menAudios/urduLanguage/discuss/loudly.mp3'
-             ,
+            ? 'audios/menAudios/discuss/speakLoudly.mp3'
+            : 'audios/menAudios/urduLanguage/discuss/loudly.mp3',
         womenVoice: selectedLang == 'English'
-            ?'audios/womenAudios/discuss/speakLoudly.mp3': 'audios/womenAudios/urduLanguage/discuss/loudly.mp3'
-             ),
+            ? 'audios/womenAudios/discuss/speakLoudly.mp3'
+            : 'audios/womenAudios/urduLanguage/discuss/loudly.mp3'),
   ];
 
   checkGenderVoice(double Selectedval, String maleVoice, String femaleVoice) {
