@@ -58,6 +58,4 @@ const Map<String, String> urdu = {
   'Speak Slowly': 'اہستہ بولو',
   'Speak Loudly': 'زور سے بولو',
   'Select Language': 'زبان منتخب کریں'
-
-
 };

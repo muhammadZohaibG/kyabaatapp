@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:howsfeeling/Views/Screens/Gender/GenderController.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/DiscussCategories/DiscussCategoriesController.dart';
 import 'package:howsfeeling/Views/Screens/VoicesCategories/Screens/Pain/painCategoriesController.dart';
-import 'package:howsfeeling/utils/consts.dart';
 import 'package:howsfeeling/utils/global.dart';
 
 import '../../../../../Audios/Audios.dart';
