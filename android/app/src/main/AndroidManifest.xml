@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.howsfeeling">
+    package="com.elabdtech.howsfeeling">
    <application
         android:label="Hows Feeling"
        android:name="${applicationName}"
