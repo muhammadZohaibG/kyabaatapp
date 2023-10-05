@@ -1,4 +1,4 @@
-package com.example.howsfeeling;
+package com.elabdtech.howsfeeling;
 
 import io.flutter.embedding.android.FlutterActivity;
 
